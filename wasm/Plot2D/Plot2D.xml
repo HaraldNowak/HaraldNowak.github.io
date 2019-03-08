@@ -1,0 +1,67 @@
+<?xml-stylesheet type="text/xsl" href="dattransform.xslt" ?>
+<Dialog title="Plot2D">
+  <Description>This DLL draws an arbitrary function.</Description>
+  <Help></Help>
+  <Parameters>
+    <Parameter type="longtext" name="f(x)" default="3*sin(x)/x">
+      <Description>This is the first function to draw or the x component of a parametric line.</Description>
+    </Parameter>
+    <Parameter type="longtext" name="g(x)" default="xs:10*x;cos(xs)+cos(1.1*xs)">
+      <Description>This is the 2nd function to draw, or the y component of a parametric line.</Description>
+    </Parameter>
+    <Parameter name="f_Color" default="0,255,0" type="color">
+      <Description>The color of the first function f(x) in the form R,G,B (all between 0 and 255)</Description>
+    </Parameter>
+    <Parameter name="g_Color" default="255,0,150" type="color">
+      <Description>The color of the second function g(x) in the form R,G,B (all between 0 and 255)</Description>
+    </Parameter>
+    <Parameter name="bkgndColor" default="0,0,0" type="color">
+      <Description>The background color</Description>
+    </Parameter>    
+    <Parameter name="gridColor" default="0,255,0" type="color">
+      <Description>The color of the axis and the grid</Description>
+    </Parameter>        
+    <Parameter name="parametric" default="No">
+        <Value>Yes</Value>
+        <Value>No</Value>
+        <Description>If this is set to "Yes", functions f() and g() are the x,y components of a parametric line (f(t),g(t)).</Description>
+    </Parameter>
+    <Parameter name="t-min" default="0">
+      <Description>Only meaningful, if "parametric" is "yes": lower value of parameter t range.</Description>
+    </Parameter>
+    <Parameter name="t-max" default="10">
+      <Description>Only meaningful, if "parametric" is "yes": upper value of parameter t range.</Description>
+    </Parameter>
+    <Parameter name="dt" default="0.1">
+      <Description>Only meaningful, if "parametric" is "yes": resolution of parameter t (the stepsize).</Description>
+    </Parameter>
+    <Parameter name="InitDim" default="Yes">
+        <Value>Yes</Value>
+        <Value>No</Value>
+        <Description>If this is set to "Yes", the following 6 parameters are valid; if set to "No", the following 6 parameters are ignored.</Description>
+    </Parameter>
+    <Parameter name="x-left" default="-10">
+      <Description>This is the left border of the visible area.</Description>
+    </Parameter>
+    <Parameter name="x-right" default="10">
+      <Description>This is the right border of the visible area.</Description>
+    </Parameter>
+    <Parameter name="y-upper" default="10">
+      <Description>This is the upper border of the visible area.</Description>
+    </Parameter>
+    <Parameter name="y-lower" default="-10">
+      <Description>This is the lower border of the visible area.</Description>
+    </Parameter>
+    <Parameter name="phi" default="0">
+      <Description>A angle around which the graph will be rotated.</Description>
+    </Parameter>
+	
+    <Parameter name="epsilon" default="0.00001">
+      <Description>The maximum error tolerated, before bisection stops</Description>
+    </Parameter>
+    <Parameter name="precision" default="10">
+      <Description>The number of digits to display on output.</Description>
+    </Parameter>
+	
+  </Parameters>
+</Dialog>
